@@ -13,7 +13,6 @@ export const useFetchMessages = (): Hooks => {
     (async () => {
       const response = await fetch('/api/messages');
       const data: Message[] = await response.json();
-      console.log(data)
       setMessages(data)
     })();
   }, []);
