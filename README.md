@@ -8,3 +8,8 @@ cp .env.example .env.local
 ```bash
 pnpm dev
 ```
+
+## ビルド
+```bash
+pnpm turbo build
+```
