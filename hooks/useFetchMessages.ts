@@ -9,7 +9,7 @@ interface Hooks {
 
 export const useFetchMessages = (): Hooks => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
