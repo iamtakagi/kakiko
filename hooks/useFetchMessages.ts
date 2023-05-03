@@ -12,7 +12,7 @@ export const useFetchMessages = (): Hooks => {
   useEffect(() => {
     (async () => {
       const response = await fetch('/api/messages');
-      const data: QueryResultRow[] = await response.json();
+      const data: Message[] = await response.json();
       console.log(data)
       setMessages(data)
     })();
