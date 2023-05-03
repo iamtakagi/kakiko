@@ -1,6 +1,6 @@
 {
-  "name": "postgres-starter",
-  "repository": "https://github.com/vercel/examples.git",
+  "name": "kakiko",
+  "repository": "https://github.com/iamtakagi/kakiko.git",
   "license": "MIT",
   "version": "0.0.0",
   "private": true,

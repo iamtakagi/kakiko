@@ -19,7 +19,7 @@ export default function RefreshButton() {
         })
       }}
     >
-      {isPending ? 'Refreshing...' : 'Refresh'}
+      {isPending ? 'こうしんちゅう…' : 'こうしん'}
     </button>
   )
 }
