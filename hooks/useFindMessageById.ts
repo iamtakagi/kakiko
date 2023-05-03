@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 
 interface Hooks {
   message?: Message;
+  loading: boolean;
 }
 
 export const useFindMessageById = (id: string): Hooks => {
   const [message, setMessage] = useState<Message>();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -19,5 +21,6 @@ export const useFindMessageById = (id: string): Hooks => {
 
   return {
     message,
+    loading
   };
 };
