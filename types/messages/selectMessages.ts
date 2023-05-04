@@ -1,4 +1,4 @@
-import { initSql } from "@/sql/initSql";
+import { initSql } from "../../sql/initSql";
 import { QueryResult, QueryResultRow, sql } from "@vercel/postgres";
 
 export const selectMessages = async (): Promise<QueryResult<QueryResultRow>> => {

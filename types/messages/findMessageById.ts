@@ -1,4 +1,4 @@
-import { initSql } from "@/sql/initSql";
+import { initSql } from "../../sql/initSql";
 import { sql } from "@vercel/postgres";
 import { Message } from "./message";
 
