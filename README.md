@@ -11,6 +11,7 @@
 cp .env.example .env.local
 ```
 
+### 開発サーバの立ち上げ
 ```bash
 pnpm dev
 ```
