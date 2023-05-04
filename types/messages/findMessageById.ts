@@ -1,6 +1,6 @@
 import { initSql } from '../../sql/initSql';
 import { sql } from '@vercel/postgres';
-import { Message } from './message';
+import { Message } from './types';
 
 export const findMessageById = async (id: string): Promise<Message> => {
   let data;
