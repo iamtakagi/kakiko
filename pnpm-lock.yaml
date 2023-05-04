@@ -44,10 +44,10 @@ dependencies:
 devDependencies:
   '@iamtakagi/eslint-config':
     specifier: ^1.0.0
-    version: 1.0.0(@iamtakagi/prettier-config@1.0.0)(eslint@8.38.0)(prettier@2.8.8)(typescript@5.0.4)
+    version: 1.0.0(@iamtakagi/prettier-config@1.0.3)(eslint@8.38.0)(prettier@2.8.8)(typescript@5.0.4)
   '@iamtakagi/prettier-config':
-    specifier: ^1.0.0
-    version: 1.0.0(prettier@2.8.8)
+    specifier: ^1.0.3
+    version: 1.0.3(prettier@2.8.8)
   '@types/ms':
     specifier: ^0.7.31
     version: 0.7.31
@@ -120,7 +120,7 @@ packages:
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
 
-  /@iamtakagi/eslint-config@1.0.0(@iamtakagi/prettier-config@1.0.0)(eslint@8.38.0)(prettier@2.8.8)(typescript@5.0.4):
+  /@iamtakagi/eslint-config@1.0.0(@iamtakagi/prettier-config@1.0.3)(eslint@8.38.0)(prettier@2.8.8)(typescript@5.0.4):
     resolution: {integrity: sha512-XZWoE7LsgcvpAfGv04kUwWtOQ7wXFZi9uFs5G5tIS6zFEw13BhM/2eOMBr7qWYxn9VUQ49SjkZBK1kqU2Kbt5w==}
     peerDependencies:
       '@iamtakagi/prettier-config': '>=1.0.0'
@@ -128,7 +128,7 @@ packages:
       prettier: '>=2.0.0'
       typescript: '>=3.7.0'
     dependencies:
-      '@iamtakagi/prettier-config': 1.0.0(prettier@2.8.8)
+      '@iamtakagi/prettier-config': 1.0.3(prettier@2.8.8)
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.59.2(@typescript-eslint/parser@5.59.1)(eslint@8.38.0)(typescript@5.0.4)
       '@typescript-eslint/parser': 5.59.1(eslint@8.38.0)(typescript@5.0.4)
@@ -147,8 +147,8 @@ packages:
       - supports-color
     dev: true
 
-  /@iamtakagi/prettier-config@1.0.0(prettier@2.8.8):
-    resolution: {integrity: sha512-CxpQexbbfF6+CKBHUM3NlcdY8cAKnjBJd8Rbv4zQ77JC6d4e0xFHUUqyyBMBk1/csNquFogV4pjdvsi5c57ouw==}
+  /@iamtakagi/prettier-config@1.0.3(prettier@2.8.8):
+    resolution: {integrity: sha512-IE/5OvqYp/w+jpKffWBJfKS8gFfoynbPQbUQnJtVtTrMstARna6D5YY2Efme6c9zJjCqvutOIzSlgLTX664suQ==}
     peerDependencies:
       prettier: '>=2.0.0'
     dependencies:

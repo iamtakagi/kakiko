@@ -10,12 +10,23 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "fmt": "pnpm run lint:prettier --write",
+    "prettier": "pnpm run lint:prettier --write",
     "lint:eslint": "eslint . --ext \".js,.jsx,.ts,.tsx\"",
     "lint:prettier": "prettier --check \"**/*.{js,ts,tsx,css,json,yaml,md}\"",
     "lintfix": "run-s 'lintfix:*' 'fmt'",
     "lintfix:eslint": "pnpm run lint:eslint --fix"
   },
+  "eslint": {
+    "extends": [
+      "@iamtakagi"
+    ],
+    "parserOptions": {
+      "project": [
+        "./tsconfig.json"
+      ]
+    }
+  },
+  "prettier": "@iamtakagi/prettier-config",
   "dependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
@@ -33,7 +44,7 @@
   },
   "devDependencies": {
     "@iamtakagi/eslint-config": "^1.0.0",
-    "@iamtakagi/prettier-config": "^1.0.0",
+    "@iamtakagi/prettier-config": "^1.0.3",
     "@types/ms": "^0.7.31",
     "eslint": "8.38.0",
     "prettier": "^2.8.8",
