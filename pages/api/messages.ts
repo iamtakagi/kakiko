@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  if (req.method === 'POST') {
+  else if (req.method === 'POST') {
     if (!req.body) return;
     const { text } = req.body;
     if (typeof text !== 'string') return;
