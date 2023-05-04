@@ -26,8 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (typeof text !== 'string') return;
     if (text.length > 30) return;
     await insertMessage(text);
-    res.status(201);
-    res.redirect('/');
+    res.status(201).redirect('/').end();
   }
 };
 
