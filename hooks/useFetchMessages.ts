@@ -1,5 +1,4 @@
 import { Message } from "../types/messages/message";
-import { QueryResultRow } from "@vercel/postgres";
 import { useEffect, useState } from "react";
 
 interface Hooks {
