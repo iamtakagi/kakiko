@@ -1,4 +1,4 @@
-import { QueryResultRow } from "@vercel/postgres";
+import { QueryResultRow } from '@vercel/postgres';
 
 export interface IMessage {
   id: string;

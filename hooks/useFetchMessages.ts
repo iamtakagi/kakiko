@@ -1,5 +1,5 @@
-import { Message } from "../types/messages/message";
-import { useEffect, useState } from "react";
+import { Message } from '../types/messages/message';
+import { useEffect, useState } from 'react';
 
 interface Hooks {
   messages: Message[];
@@ -21,6 +21,6 @@ export const useFetchMessages = (): Hooks => {
 
   return {
     messages,
-    loading
+    loading,
   };
 };

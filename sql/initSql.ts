@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres'
+import { sql } from '@vercel/postgres';
 
 export const initSql = async () => {
   const createTable = await sql`
@@ -7,11 +7,11 @@ export const initSql = async () => {
       text VARCHAR(255) NOT NULL,
       "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     );
-    `
-    
-  console.log(`Created "messages" table`)
+    `;
+
+  console.log(`Created "messages" table`);
 
   return {
-    createTable
-  }
-}
+    createTable,
+  };
+};
