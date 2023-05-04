@@ -18,16 +18,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const data = await selectMessages();
     res.json(data.rows);
     return;
-  }
-
-  if (req.method === 'POST') {
+  } else if (req.method === 'POST') {
     if (!req.body) return;
     const { text } = req.body;
     if (typeof text !== 'string') return;
     if (text.length > 30) return;
     await insertMessage(text);
-    res.status(201);
-    res.redirect('/');
+    res.redirect(303, '/');
   }
 };
 

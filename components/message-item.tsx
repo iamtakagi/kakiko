@@ -1,4 +1,4 @@
-import { Message } from '../types/messages/message';
+import { Message } from '../types/messages/types';
 import Link from 'next/link';
 
 interface Props {
