@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useFetchMessages } from '../hooks/useFetchMessages';
 import { MessageItem } from './message-item';
 
