@@ -12,7 +12,7 @@ const MessagePage: React.FC = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { message, loading } = useFindMessageById(id);
 
-  if (loading) return <p>よみこみちゅう...</p>;
+  if (loading || !message) return <p>よみこみちゅう...</p>;
 
   return (
     message && (
