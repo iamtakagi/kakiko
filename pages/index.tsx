@@ -5,12 +5,14 @@ import { Seo } from '@/components/seo';
 
 const IndexPage: React.FC = () => {
   return (
-    <div>
+    <>
       <Seo title={'kakiko'} description={'最強の無料掲示板'} />
-      <MessageForm />
-      <RefreshButton />
-      <MessageTimeline />
-    </div>
+      <div>
+        <MessageForm />
+        <RefreshButton />
+        <MessageTimeline />
+      </div>
+    </>
   );
 };
 
