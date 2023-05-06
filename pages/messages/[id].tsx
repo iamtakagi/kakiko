@@ -1,3 +1,5 @@
+import { MessageItem } from '@/components/message-item';
+import { Seo } from '@/components/seo';
 import { useFindMessageById } from '@/hooks/useFindMessageById';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -8,19 +10,15 @@ const MessagePage: React.FC = () => {
   if (typeof id !== 'string') return <div>無効な ID です</div>;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { message } = useFindMessageById(id);
+  const { message, loading } = useFindMessageById(id);
 
-  if (!message) return <></>;
+  if(loading) return <p>よみこみちゅう...</p>
 
   return (
     message && (
       <div>
-        <Link href={`/messages/${message.id}`}>
-          <p>
-            {message.id}: {message.createdAt}
-          </p>
-        </Link>
-        <p>{message.text}</p>
+        <Seo title={'kakiko'} description={message.text} />
+        <MessageItem message={message}/>
         <Link href={'/'}>←トップページに戻る</Link>
       </div>
     )
