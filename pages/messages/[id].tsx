@@ -12,7 +12,7 @@ const MessagePage: React.FC = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { message, loading } = useFindMessageById(id);
 
-  if(!message) return <p>メッセージが存在しないか、データの取得に失敗しました</p>
+  if (!message) return <p>メッセージが存在しないか、データの取得に失敗しました</p>;
 
   if (loading) return <p>よみこみちゅう...</p>;
 
