@@ -1,7 +1,7 @@
-import { findMessageById } from '@/types/messages/findMessageById';
+import { findMessageById } from '@/lib/messages/findMessageById';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { insertMessage } from '@/types/messages/insertMessage';
-import { selectMessages } from '@/types/messages/selectMessages';
+import { insertMessage } from '@/lib/messages/insertMessage';
+import { selectMessages } from '@/lib/messages/selectMessages';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   res.setHeader('X-Robots-Tag', 'noindex');

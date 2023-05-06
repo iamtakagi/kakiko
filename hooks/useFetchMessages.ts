@@ -1,4 +1,4 @@
-import { Message } from '../types/messages/types';
+import { Message } from '../types/messages';
 import { useEffect, useState } from 'react';
 
 interface Hooks {
