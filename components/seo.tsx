@@ -20,7 +20,7 @@ export const Seo: React.FC<Props> = ({ title, description, ogp }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={'kakiko'} />
-      <meta property="og:image" content={ogp ? ogp : 'https:///kakiko.vercel.app/icon.jpg'} />
+      <meta property="og:image" content={ogp ? ogp : 'https:///kakiko.vercel.app/icon.png'} />
       <meta property="og:url" content="https:///kakiko.vercel.app/" />
     </Head>
   );
