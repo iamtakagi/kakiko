@@ -18,11 +18,13 @@ const MessagePage: React.FC = () => {
 
   return (
     message && (
-      <div>
+      <>
         <Seo title={'kakiko'} description={message.text} />
-        <MessageItem message={message} />
-        <Link href={'/'}>←トップページに戻る</Link>
-      </div>
+        <div>
+          <MessageItem message={message} />
+          <Link href={'/'}>←トップページに戻る</Link>
+        </div>
+      </>
     )
   );
 };
