@@ -1,6 +1,8 @@
-import { sql } from '@vercel/postgres';
+import { QueryResult, QueryResultRow, sql } from '@vercel/postgres';
 
-export const initSql = async () => {
+export const initSql = async (): Promise<{
+  createTable: QueryResult<QueryResultRow>;
+}> => {
   const createTable = await sql`
     CREATE TABLE IF NOT EXISTS messages (
       id SERIAL PRIMARY KEY,
