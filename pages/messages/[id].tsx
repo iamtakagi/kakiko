@@ -12,13 +12,13 @@ const MessagePage: React.FC = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { message, loading } = useFindMessageById(id);
 
-  if(loading) return <p>よみこみちゅう...</p>
+  if (loading) return <p>よみこみちゅう...</p>;
 
   return (
     message && (
       <div>
         <Seo title={'kakiko'} description={message.text} />
-        <MessageItem message={message}/>
+        <MessageItem message={message} />
         <Link href={'/'}>←トップページに戻る</Link>
       </div>
     )
