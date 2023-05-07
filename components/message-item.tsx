@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { Message } from '../types/messages';
 import Link from 'next/link';
 
@@ -11,7 +12,7 @@ export const MessageItem: React.FC<Props> = ({ message }) => {
       <hr />
       <Link href={`/messages/${message.id}`}>
         <p>
-          {message.id}: {message.createdAt}
+          {message.id}: {dayjs(message.createdAt).format()}
         </p>
       </Link>
       <p>{message.text}</p>
