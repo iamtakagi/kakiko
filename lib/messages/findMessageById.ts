@@ -1,7 +1,7 @@
 import { initSql } from '../../sql/initSql';
 import { QueryResult, sql } from '@vercel/postgres';
 import { Message } from '../../types/messages';
-export const findMessageById = async (id: string): Promise<Message> => {
+export const findMessageById = async (id: string): Promise<Message | undefined> => {
   let data: QueryResult<Message>;
   try {
     data = await sql`SELECT * FROM messages WHERE id = ${id};`;
