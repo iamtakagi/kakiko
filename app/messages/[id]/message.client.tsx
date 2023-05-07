@@ -4,18 +4,18 @@ import { useFindMessageById } from '@/hooks/useFindMessageById';
 import { notFound } from 'next/navigation';
 
 interface Props {
-    id: string
+  id: string;
 }
 
-export const Message: React.FC<Props> = ({id}) => {
-    if (typeof id !== 'string') return <p>無効な ID です</p>;
+export const Message: React.FC<Props> = ({ id }) => {
+  if (typeof id !== 'string') return <p>無効な ID です</p>;
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { message, loading } = useFindMessageById(id);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { message, loading } = useFindMessageById(id);
 
-    if (loading) return <p>よみこみちゅう...</p>;
+  if (loading) return <p>よみこみちゅう...</p>;
 
-    if (!message) return notFound();
+  if (!message) return notFound();
 
-    return <MessageItem message={message} />
+  return <MessageItem message={message} />;
 };
