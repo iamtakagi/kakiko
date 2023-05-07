@@ -21,7 +21,7 @@ export default async function NextApiHandler(req: NextApiRequest, res: NextApiRe
       if (!req.body) return;
       const { text } = req.body;
       if (typeof text !== 'string') return;
-      if (text.length > 30) return;
+      if (text.length > 100) return;
       await insertMessage(text);
       res.redirect(303, '/');
       break;

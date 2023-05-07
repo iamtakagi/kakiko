@@ -9,7 +9,7 @@ export const MessageForm: React.FC = () => {
         type="text"
         name="text"
         required
-        size={30}
+        maxLength={100}
         value={text}
         placeholder={'メッセージを入力してね'}
         onInput={(event): void => onChangeText(event)}
