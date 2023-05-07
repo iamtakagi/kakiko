@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { Message } from './message.client';
+import { findMessageById } from '@/lib/messages/findMessageById';
 
 export const dynamic = 'force-dynamic';
 
