@@ -4,7 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-q
+    domains: [],
+  },
 };
 
 module.exports = nextConfig;
