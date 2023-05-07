@@ -1,3 +1,4 @@
+'use client';
 import { useFetchMessages } from '../hooks/useFetchMessages';
 import { MessageItem } from './message-item';
 

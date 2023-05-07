@@ -1,3 +1,5 @@
+'use client';
+
 import { Message } from '../types/messages';
 import { useEffect, useState } from 'react';
 
