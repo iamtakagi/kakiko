@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { Message } from './message.client';
 import { findMessageById } from '@/lib/messages/findMessageById';
+import dayjs from 'dayjs';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   if (!message) return notFound();
 
   return {
-    title: 'kakiko',
+    title: `kakiko | ${message.id}: ${dayjs(message.createdAt).format()}`,
     description: message.text,
     openGraph: {
       type: 'website',
