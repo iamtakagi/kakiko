@@ -1,6 +1,6 @@
-import { Message } from "../types/messages/message";
-import { QueryResultRow } from "@vercel/postgres";
-import { useEffect, useState } from "react";
+import { Message } from '../types/messages';
+import { QueryResultRow } from '@vercel/postgres';
+import { useEffect, useState } from 'react';
 
 interface Hooks {
   message?: Message;
@@ -22,6 +22,6 @@ export const useFindMessageById = (id: string): Hooks => {
 
   return {
     message,
-    loading
+    loading,
   };
 };

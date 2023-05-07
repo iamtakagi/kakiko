@@ -1,20 +1,15 @@
-import Link from "next/link";
-import { useFetchMessages } from "../hooks/useFetchMessages";
+import { useFetchMessages } from '../hooks/useFetchMessages';
+import { MessageItem } from './message-item';
 
 export const MessageTimeline: React.FC = () => {
-  const { messages } = useFetchMessages();
+  const { messages, loading } = useFetchMessages();
+
+  if (loading) return <p>よみこみちゅう...</p>;
+
   return (
     <div>
       {messages?.map((message, i) => {
-        return (
-          <div key={message.id}>
-          <hr />
-          <Link href={`/messages/${message.id}`}>
-            <p>{message.id}: {message.createdAt}</p>
-          </Link>
-          <p>{message.text}</p>
-        </div>
-        );
+        return <MessageItem key={message.id} message={message} />;
       })}
     </div>
   );

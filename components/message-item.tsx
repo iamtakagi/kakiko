@@ -1,5 +1,5 @@
-import { Message } from "../types/messages/message";
-import Link from "next/link";
+import { Message } from '../types/messages';
+import Link from 'next/link';
 
 interface Props {
   message: Message;
