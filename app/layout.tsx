@@ -1,3 +1,22 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'kakiko',
+  description: '最強の無料掲示板',
+  viewport: 'width=device-width, initial-scale=1.0',
+  openGraph: {
+    type: 'website',
+    siteName: 'kakiko',
+    title: 'kakiko',
+    description: '最強の無料掲示板',
+    url: 'https:///kakiko.vercel.app/',
+  },
+  twitter: {
+    card: 'summary',
+    title: `kakiko`,
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
