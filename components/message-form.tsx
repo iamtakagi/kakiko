@@ -1,3 +1,4 @@
+'use client'
 import { useMessageForm } from '../hooks/useMessageForm';
 
 export const MessageForm: React.FC = () => {

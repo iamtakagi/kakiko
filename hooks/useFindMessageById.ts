@@ -1,3 +1,5 @@
+'use client'
+
 import { Message } from '../types/messages';
 import { QueryResultRow } from '@vercel/postgres';
 import { useEffect, useState } from 'react';

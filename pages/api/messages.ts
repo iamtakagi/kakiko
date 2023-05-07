@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { insertMessage } from '@/lib/messages/insertMessage';
 import { selectMessages } from '@/lib/messages/selectMessages';
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function NextApiHandler (req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('X-Robots-Tag', 'noindex');
   switch (req.method) {
     case 'GET':
@@ -30,5 +30,3 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       break;
   }
 };
-
-export default handler;
