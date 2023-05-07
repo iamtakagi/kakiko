@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Message } from '../types/messages';
 import { QueryResultRow } from '@vercel/postgres';
