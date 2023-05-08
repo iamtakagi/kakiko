@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             'justify-center',
           )}
         >
-          <h1 className={clsx('pt-4', 'pb-8', 'justify-start', 'text-xl')}>
+          <h1 className={clsx('pt-3', 'pb-3', 'justify-start', 'text-xl')}>
             kakiko (むりょうのけいじばん)
           </h1>
           {children}
