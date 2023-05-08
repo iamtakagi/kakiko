@@ -29,7 +29,7 @@ export const MessageForm: React.FC = () => {
           'rounded',
         )}
       >
-        カキコ❕
+        カキコ❗
       </button>
     </form>
   );
