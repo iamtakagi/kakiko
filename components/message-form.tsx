@@ -1,10 +1,11 @@
 'use client';
 import { useMessageForm } from '../hooks/useMessageForm';
+import clsx from 'clsx';
 
 export const MessageForm: React.FC = () => {
   const { text, onChangeText, onSubmit } = useMessageForm();
   return (
-    <form onSubmit={e => onSubmit(e)} action="/api/messages" method="POST">
+    <form onSubmit={e => onSubmit(e)} action="/api/messages" method="POST" className={clsx('mt-3')}>
       <input
         type="text"
         name="text"
@@ -14,8 +15,22 @@ export const MessageForm: React.FC = () => {
         value={text}
         placeholder={'メッセージを入力してね'}
         onInput={(event): void => onChangeText(event)}
+        className={clsx('border-2', 'border-slate-300', 'focus:border-blue-600', 'rounded')}
       />
-      <button type="submit">おくる！</button>
+      <button
+        type="submit"
+        className={clsx(
+          'ml-2',
+          'pl-2',
+          'pr-2',
+          'border',
+          'border-slate-300',
+          'hover:border-indigo-300',
+          'rounded',
+        )}
+      >
+        おくる！
+      </button>
     </form>
   );
 };

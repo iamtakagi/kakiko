@@ -4,6 +4,7 @@ import Link from 'next/link';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import clsx from 'clsx';
 
 dayjs.extend(timezone);
 dayjs.extend(utc);
@@ -15,7 +16,7 @@ interface Props {
 
 export const MessageItem: React.FC<Props> = ({ message }) => {
   return (
-    <div key={message.id}>
+    <div key={message.id} className={clsx('pt-3')}>
       <hr />
       <Link href={`/messages/${message.id}`}>
         <p>

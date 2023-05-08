@@ -1,3 +1,5 @@
+import '@/styles/global.css';
+import clsx from 'clsx';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -21,8 +23,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body>
-        <main className="relative flex min-h-screen flex-col items-center justify-center">
-          <h1 className="pt-4 pb-8 justify-start">kakiko (むりょうのけいじばん)</h1>
+        <main
+          className={clsx(
+            'relative',
+            'flex',
+            'min-h-screen',
+            'flex-col',
+            'items-center',
+            'justify-center',
+          )}
+        >
+          <h1 className={clsx('pt-4', 'pb-8', 'justify-start', 'text-xl')}>
+            kakiko (むりょうのけいじばん)
+          </h1>
           {children}
         </main>
       </body>
