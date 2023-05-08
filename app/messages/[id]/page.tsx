@@ -4,7 +4,14 @@ import { notFound } from 'next/navigation';
 
 import { Message } from './message.client';
 import { findMessageById } from '@/lib/messages/findMessageById';
+
 import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
+
+dayjs.extend(timezone);
+dayjs.extend(utc);
+dayjs.tz.setDefault('Asia/Tokyo');
 
 export const dynamic = 'force-dynamic';
 
@@ -14,7 +21,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   if (!message) return notFound();
 
   return {
-    title: `kakiko | ${message.id}: ${dayjs(message.createdAt).format()}`,
+    title: `kakiko | ${message.id}: ${dayjs(message.createdAt).tz('Asia/Tokyo').format()}`,
     description: message.text,
     openGraph: {
       type: 'website',
