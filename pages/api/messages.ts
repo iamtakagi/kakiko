@@ -1,9 +1,9 @@
-import { findMessageById } from '@/lib/messages/findMessageById';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { findMessageById } from '@/lib/messages/findMessageById';
 import { insertMessage } from '@/lib/messages/insertMessage';
 import { selectMessages } from '@/lib/messages/selectMessages';
 
-export default async function NextApiHandler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('X-Robots-Tag', 'noindex');
   switch (req.method) {
     case 'GET':
