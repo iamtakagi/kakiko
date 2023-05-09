@@ -14,7 +14,9 @@
     "lint:eslint": "eslint . --ext \".js,.jsx,.ts,.tsx\"",
     "lint:prettier": "prettier --check \"**/*.{js,ts,tsx,css,json,yaml,md}\"",
     "lintfix": "run-s 'lintfix:*' 'fmt'",
-    "lintfix:eslint": "pnpm run lint:eslint --fix"
+    "lintfix:eslint": "pnpm run lint:eslint --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslint": {
     "extends": [
@@ -48,9 +50,19 @@
   "devDependencies": {
     "@iamtakagi/eslint-config": "^1.0.0",
     "@iamtakagi/prettier-config": "^1.0.3",
+    "@storybook/addon-essentials": "^7.0.9",
+    "@storybook/addon-interactions": "^7.0.9",
+    "@storybook/addon-links": "^7.0.9",
+    "@storybook/addon-mdx-gfm": "^7.0.9",
+    "@storybook/blocks": "^7.0.9",
+    "@storybook/nextjs": "^7.0.9",
+    "@storybook/react": "^7.0.9",
+    "@storybook/testing-library": "^0.1.0",
     "@types/ms": "^0.7.31",
     "eslint": "8.38.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "prettier": "^2.8.8",
+    "storybook": "^7.0.9",
     "turbo": "^1.9.3"
   }
 }
