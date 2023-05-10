@@ -5,7 +5,7 @@ import { MessageTimeline } from '@/components/message-timeline';
 import { MoeCounter } from '@/components/moe-counter';
 import RefreshButton from '@/components/refresh-button';
 
-export default async function Page() {
+export default function Page() {
   return (
     <div>
       <MoeCounter />
