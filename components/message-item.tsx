@@ -1,14 +1,7 @@
 import { Message } from '../types/messages';
 import Link from 'next/link';
-
-import dayjs from 'dayjs';
-import timezone from 'dayjs/plugin/timezone';
-import utc from 'dayjs/plugin/utc';
+import dayjs from '@/lib/external/dayjs'
 import clsx from 'clsx';
-
-dayjs.extend(timezone);
-dayjs.extend(utc);
-dayjs.tz.setDefault('Asia/Tokyo');
 
 interface Props {
   message: Message;
