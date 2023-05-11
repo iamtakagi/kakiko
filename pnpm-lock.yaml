@@ -87,6 +87,9 @@ devDependencies:
   '@types/ms':
     specifier: ^0.7.31
     version: 0.7.31
+  dotenv:
+    specifier: ^16.0.3
+    version: 16.0.3
   eslint:
     specifier: 8.38.0
     version: 8.38.0
