@@ -1,4 +1,4 @@
-import { findMessageById } from "../../lib/messages/findMessageById";
+import { findMessageById } from "../../../lib/messages/findMessageById";
 
 describe('lib/messages/findMessageById.ts', () => {
 
