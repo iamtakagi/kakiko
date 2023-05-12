@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MessageForm } from '../components/MessageForm';
 
 const meta: Meta<typeof MessageForm> = {
-  title: 'Example/MessageForm',
+  title: 'MessageForm',
   component: MessageForm,
   tags: ['autodocs'],
   argTypes: {
