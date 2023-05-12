@@ -6,4 +6,9 @@ describe('lib/messages/findMessageById.ts', () => {
         const message = await findMessageById('1');
         expect(message).toBeDefined();
     });
+
+    test('データベースからメッセージを取得できない', async () => {
+        const message = await findMessageById('-1');
+        expect(message).toBeUndefined();
+    });
 })
