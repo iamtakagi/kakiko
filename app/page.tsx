@@ -1,9 +1,9 @@
 'use client';
 
-import { MessageForm } from '@/components/message-form';
-import { MessageTimeline } from '@/components/message-timeline';
-import { MoeCounter } from '@/components/moe-counter';
-import RefreshButton from '@/components/refresh-button';
+import { MessageForm } from '@/components/MessageForm';
+import { MessageTimeline } from '@/components/MessageTimeline';
+import { MoeCounter } from '@/components/MoeCounter';
+import { RefreshButton } from '@/components/RefreshButton';
 
 export default function Page() {
   return (

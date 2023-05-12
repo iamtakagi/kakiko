@@ -1,6 +1,6 @@
 'use client';
 import { useFetchMessages } from '../hooks/useFetchMessages';
-import { MessageItem } from './message-item';
+import { MessageItem } from './MessageItem';
 
 export const MessageTimeline: React.FC = () => {
   const { messages, loading } = useFetchMessages();

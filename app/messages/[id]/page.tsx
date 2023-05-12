@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { Message } from './message.client';
+import { MessageItemLoader } from './MessageItemLoader.client';
 import { findMessageById } from '@/lib/messages/findMessageById';
 
 import dayjs from '@/lib/external/dayjs'
@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <>
       <div>
-        <Message id={id} />
+        <MessageItemLoader id={id} />
         <Link href={'/'}>←トップページに戻る</Link>
       </div>
     </>
