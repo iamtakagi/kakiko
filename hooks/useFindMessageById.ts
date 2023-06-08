@@ -16,7 +16,7 @@ export const useFindMessageById = (id: string): Hooks => {
   useEffect(() => {
     (async () => {
       const response = await fetch(`/api/messages?id=${id}`);
-      const data: QueryResultRow = await response.json();
+      const data = (await (response.json()) as QueryResultRow);
       setMessage(data);
       setLoading(false);
     })();
