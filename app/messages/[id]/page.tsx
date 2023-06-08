@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { MessageItemLoader } from './MessageItemLoader.client';
 import { findMessageById } from '@/lib/messages/findMessageById';
 
-import dayjs from '@/lib/external/dayjs'
+import dayjs from '@/lib/external/dayjs';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,11 +35,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params;
 
   return (
-    <>
-      <div>
-        <MessageItemLoader id={id} />
-        <Link href={'/'}>←トップページに戻る</Link>
-      </div>
-    </>
+    <div>
+      <MessageItemLoader id={id} />
+      <Link href={'/'}>←トップページに戻る</Link>
+    </div>
   );
 }
