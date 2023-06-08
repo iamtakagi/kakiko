@@ -14,10 +14,19 @@ export const useFetchMessages = (): Hooks => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch('/api/messages');
-      const data: Message[] = await response.json();
-      setMessages(data);
-      setLoading(false);
+      let ignore = false;
+      const setIgnore = (value: boolean) => {
+        ignore = value;
+      };
+      if (!ignore) {
+        const response = await fetch('/api/messages');
+        const data: Message[] = await response.json();
+        setMessages(data);
+        setLoading(false);
+      }
+      return () => {
+        setIgnore(true);
+      };
     })();
   }, []);
 

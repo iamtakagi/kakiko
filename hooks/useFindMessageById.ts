@@ -15,10 +15,19 @@ export const useFindMessageById = (id: string): Hooks => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(`/api/messages?id=${id}`);
-      const data = (await (response.json()) as QueryResultRow);
-      setMessage(data);
-      setLoading(false);
+      let ignore = false;
+      const setIgnore = (value: boolean) => {
+        ignore = value;
+      };
+      if (!ignore) {
+        const response = await fetch(`/api/messages?id=${id}`);
+        const data = (await response.json()) as QueryResultRow;
+        setMessage(data);
+        setLoading(false);
+      }
+      return () => {
+        setIgnore(true);
+      };
     })();
   }, [id]);
 
