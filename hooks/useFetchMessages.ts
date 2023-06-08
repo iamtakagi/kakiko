@@ -20,7 +20,7 @@ export const useFetchMessages = (): Hooks => {
       };
       if (!ignore) {
         const response = await fetch('/api/messages');
-        const data: Message[] = await response.json();
+        const data = (await response.json()) as Message[];
         setMessages(data);
         setLoading(false);
       }
