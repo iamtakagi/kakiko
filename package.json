@@ -59,7 +59,7 @@
     "@storybook/blocks": "^7.0.9",
     "@storybook/nextjs": "^7.0.9",
     "@storybook/react": "^7.0.9",
-    "@storybook/testing-library": "^0.1.0",
+    "@storybook/testing-library": "^0.2.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.1",
     "@types/ms": "^0.7.31",
